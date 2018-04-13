@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700");
 
-.list-style {
-    border: none;
-}
-
 .result {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -11,6 +7,15 @@
 }
 
 .album-title {
-    height: 134px;
-    padding-bottom: 64px;
+    /* height: 134px; */
+    /* padding-bottom: 64px; */
+}
+
+.flex-item {
+    background: #fff;
+    display: inline;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
 }

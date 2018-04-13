@@ -3,11 +3,8 @@ import "../styles/resultItem.css";
 
 const ResultItem = props => {
     return (
-        <li className="list-group-item list-style">
-            <img src={props.cover} alt="" />
-            <h5 className="result">{props.album}</h5>
-            {/* <hr /> */}
-        </li>
+        // <div className="flex-item">
+        <img className="flex-item" src={props.cover} alt="" />
     );
 };
 

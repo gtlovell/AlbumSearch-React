@@ -16,8 +16,7 @@ class App extends Component {
             results: [],
             covers: [],
             artists: "",
-            genres: "",
-            albums: []
+            genres: ""
         };
     }
 
@@ -33,9 +32,6 @@ class App extends Component {
                 const artistGenre = data.results.map(
                     music => music.primaryGenreName
                 );
-                const albumName = data.results.map(
-                    music => music.collectionName
-                );
                 const albumCovers = data.results.map(
                     music => music.artworkUrl100
                 );
@@ -44,8 +40,7 @@ class App extends Component {
                     results: data,
                     covers: albumCovers,
                     artists: artistTitle[0],
-                    genres: artistGenre[0],
-                    albums: albumName
+                    genres: artistGenre[0]
                 });
                 console.log(data);
             }
@@ -71,8 +66,8 @@ class App extends Component {
                     genres={this.state.genres}
                 />
                 <Results
-                    albums={this.state.albums}
                     covers={this.state.covers}
+                    albums={this.state.albums}
                 />
             </div>
         );
