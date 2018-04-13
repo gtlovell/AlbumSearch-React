@@ -3,7 +3,6 @@ import $ from "jquery";
 import "./App.css";
 import Search from "./components/Search";
 import Results from "./components/Results";
-// import AlbumList from "./components/AlbumList";
 import ArtistInfo from "./components/ArtistInfo";
 
 class App extends Component {
