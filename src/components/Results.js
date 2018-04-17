@@ -1,12 +1,25 @@
 import React from "react";
-import ResultItem from "./ResultItem";
+import "../styles/results.css";
 
 const Results = props => {
     return (
-        <div className="container flex-container wrap">
-            {props.covers.map(cover => {
-                return <img className="flex-item" src={cover} alt="" />;
-            })}
+        <div>
+            <ul className="flex-container wrap">
+                {props.albums.map(album => (
+                    <li>
+                        <div className="card">
+                            <img
+                                className="flex-item album-cover"
+                                src={album.artworkUrl100}
+                                alt={album.collectionId}
+                            />
+                            <h5 className="album-title">
+                                {album.collectionName}
+                            </h5>
+                        </div>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };

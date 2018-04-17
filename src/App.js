@@ -4,6 +4,7 @@ import "./App.css";
 import Search from "./components/Search";
 import Results from "./components/Results";
 import ArtistInfo from "./components/ArtistInfo";
+import axios from "axios";
 
 class App extends Component {
     constructor(props) {
@@ -13,38 +14,35 @@ class App extends Component {
 
         this.state = {
             searchTerm: "",
-            results: [],
-            covers: [],
+            albums: [],
             artists: "",
             genres: ""
         };
     }
 
     handleClick = () => {
-        $.ajax({
-            type: "GET",
-            dataType: "jsonp",
-            url: `https://itunes.apple.com/search?term=${
-                this.state.searchTerm
-            }&country=us&entity=album&limit=20`,
-            success: data => {
-                const artistTitle = data.results.map(music => music.artistName);
-                const artistGenre = data.results.map(
-                    music => music.primaryGenreName
+        axios
+            .get(
+                `https://itunes.apple.com/search?term=${
+                    this.state.searchTerm
+                }&country=us&entity=album&limit=20`
+            )
+            .then(res => {
+                const albums = res.data.results;
+                const artistname = res.data.results.map(
+                    artist => artist.artistName
                 );
-                const albumCovers = data.results.map(
-                    music => music.artworkUrl100
+                const genrename = res.data.results.map(
+                    artist => artist.primaryGenreName
                 );
 
                 this.setState({
-                    results: data,
-                    covers: albumCovers,
-                    artists: artistTitle[0],
-                    genres: artistGenre[0]
+                    albums,
+                    artists: artistname[0],
+                    genres: genrename[0]
                 });
-                console.log(data);
-            }
-        });
+                console.log(albums);
+            });
     };
 
     handleChange = e => {
@@ -58,17 +56,14 @@ class App extends Component {
             <div className="App">
                 <Search
                     searchTerm={this.state.searchTerm}
-                    handleChange={this.handleChange}
                     handleClick={this.handleClick}
+                    handleChange={this.handleChange}
                 />
                 <ArtistInfo
                     artists={this.state.artists}
                     genres={this.state.genres}
                 />
-                <Results
-                    covers={this.state.covers}
-                    albums={this.state.albums}
-                />
+                <Results albums={this.state.albums} />
             </div>
         );
     }

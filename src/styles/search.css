@@ -28,7 +28,18 @@ button {
     color: #fff;
     height: 40px;
     width: 100px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     font-family: "Roboto", sans-serif;
     font-weight: 500;
+}
+.formy {
+    /* margin-left: 10px auto; */
+}
+
+button.col-sm {
+    margin: 20px 10px;
+}
+
+button.col-lg-2 {
+    margin-left: 10px;
 }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700");
+
 .flex-container {
     padding: 0;
     margin: 0;
@@ -26,4 +28,21 @@
     width: 150px;
     height: 150px;
     margin: 10px;
+}
+
+.card {
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.album-cover {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.album-title {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }
