@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
 import "./styles/App.css";
 import Search from "./components/Search";
 import Results from "./components/Results";
