@@ -40,7 +40,6 @@ class App extends Component {
                     artists: artistname[0],
                     genres: genrename[0]
                 });
-                console.log(albums);
             });
     };
 
