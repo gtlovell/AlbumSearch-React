@@ -42,7 +42,6 @@ class App extends Component {
                 });
             });
     };
-
     handleChange = e => {
         this.setState({
             searchTerm: e.target.value
