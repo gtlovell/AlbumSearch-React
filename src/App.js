@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import "./App.css";
+import "./styles/App.css";
 import Search from "./components/Search";
 import Results from "./components/Results";
 import ArtistInfo from "./components/ArtistInfo";
