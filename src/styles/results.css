@@ -1,48 +1,48 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700');
 
 .flex-container {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
-    -ms-box-orient: horizontal;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
 }
 
 .wrap {
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .flex-item {
-    background: #fff;
-    display: inline;
-    padding: 5px;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+  background: #fff;
+  display: inline;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
 }
 
 .card {
-    height: 300px;
-    width: 200px;
-    border: none;
+  height: 300px;
+  width: 200px;
+  border: none;
 }
 
 .album-cover {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .album-title {
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
